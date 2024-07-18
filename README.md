@@ -7,7 +7,7 @@ time consuming setting up local python environment to try packages.
 
 Watch below Video
 
-<iframe src="https://youtu.be/Tc5ZJ0RUoS0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+[![alt text](thumbnail.png)](https://youtu.be/Tc5ZJ0RUoS0)
 
 ## 🔧 Features
 - A template with `poetry` environment
