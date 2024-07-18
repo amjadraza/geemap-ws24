@@ -3,7 +3,11 @@ A Template Project for Getting Started with GEEMAP Docker Setup
 </h1>
 
 This is a template project to get us started with [geemap](https://geemap.org/) using Docker. Often, it is 
-time consuming setting up local python environment to try packages. 
+time consuming setting up local python environment to try packages.
+
+Watch below Video
+
+<iframe src="https://youtu.be/Tc5ZJ0RUoS0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ## 🔧 Features
 - A template with `poetry` environment
