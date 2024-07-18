@@ -1,10 +1,9 @@
 <h1 align="center">
-A Template Project for Getting Started with GEEMAP Docker
+A Template Project for Getting Started with GEEMAP Docker Setup
 </h1>
 
 This is a template project to get us started with [geemap](https://geemap.org/) using Docker. Often, it is 
 time consuming setting up local python environment to try packages. 
-
 
 ## 🔧 Features
 - A template with `poetry` environment
@@ -17,7 +16,7 @@ time consuming setting up local python environment to try packages.
 1. Clone the repository📂
 
 ```bash
-git clone https://github.com/amjadraza/graphrag-template.git
+git clone https://github.com/amjadraza/geemap-ws24.git
 ```
 
 2. Install dependencies with [Poetry](https://python-poetry.org/) and activate virtual environment🔨
@@ -29,7 +28,7 @@ poetry shell
 
 3. Configure Environment Variables
 
-given `.env.example`, rename to `.env` and replace the desired key with your OpenAI Key and Model
+given `.env.example`, rename to `.env` and replace the desired Environment Variable
 
 ```bash
 
@@ -44,35 +43,39 @@ jupyter lab
 ```
 Explore the sampled notebooks with sample data
 
-4. Run the Python Scripts
+## Running in local Docker Container
 
-```bash
+When creating envronments, we often face lot of dependency and frameworks issues and it consumes lot of 
+our time in figuring out these issues. Docker setup is useful in solving these issues. 
 
-python src/global_search.py
+To run the application Docker, use
 
-or 
+```docker-compose up```
 
-python src/local_search.py
-```
+> Make sure Docker Desktop is installed on Windows Machine or Docker on Mac and Ubuntu
 
-5. Run the Streamlit server🚀
+## Running in Project in DevContainer with VsCode
 
-```bash
+If you are using Vscode as your preffered IDE, it comes with Development Container Setup which creates a development environment in isolation by starting a container as if you are working on your local machine.
 
-streamlit run --server.runOnSave=true  src/app.py
-```
+Read More on : https://code.visualstudio.com/docs/devcontainers/devcontainer-cli
 
-## Configure Indexing
+Steps:
 
-`python -m graphrag.index --init --root ./ragtest`
+1. Install DevContainer Extension
+2. You will see `.devcontainer.json` file with settings
+3. On your left-bottom, see the arrows sysmbole
+4. Click, a dialoge with Remote Development Environemnet will pop up
+5. Select `Reopen in Container`, It will create a docker container first time.
+6. Thats all you are up & running
+
+Run below command to start a Jupyter Notebook in your DevContainer Environement
+
+```jupyter lab --ip='0.0.0.0' --port=8888 --no-browser --allow-root```
+
 
 ## Credits / Resources
 
-1. [Official Documentation](https://microsoft.github.io/graphrag/)
-2. [GitHub Project](https://github.com/microsoft/graphrag)
-3. [Release Blogpost](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
-4. [Video by Mervin Praison](https://www.youtube.com/watch?v=zDv8akdf6v4)
-5. [Video by PrompmtEngineer](https://www.youtube.com/watch?v=vX3A96_F3FU)
+1. [Geemap Resource](https://geemap.org/workshops/SatMOC_2024/)
 
 
-jupyter lab --ip='0.0.0.0' --port=8888 --no-browser --allow-root
